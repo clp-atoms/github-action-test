@@ -12,11 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: GITHUB_EVENT
-        run: $GITHUB_EVENT
-        env:
-          GITHUB_EVENT: ${{ github.event }}
-
       - name: Release latest
         # Publish edge release only when pushing to "main" branch
         if: github.ref == 'refs/heads/main'
