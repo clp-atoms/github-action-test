@@ -12,5 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Test
-        run: yarn release-test
+      - name: GITHUB_EVENT
+        run: $GITHUB_EVENT
+        env:
+          GITHUB_EVENT: ${{ github.event }}
+
+      - name: Release latest
+        # Publish edge release only when pushing to "main" branch
+        if: github.ref == 'refs/heads/main'
+        run: yarn jiti scripts/release-latest.ts

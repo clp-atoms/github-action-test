@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/clp-atoms/github-action-test/issues"
   },
-  "homepage": "https://github.com/clp-atoms/github-action-test#readme"
+  "homepage": "https://github.com/clp-atoms/github-action-test#readme",
+  "dependencies": {
+    "jiti": "^1.13.0"
+  }
 }
