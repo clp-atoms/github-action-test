@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: GITHUB_EVENT
-        run: name $RELEASE_NAME tag $RELEASE_TAG author $RELEASE_AUTHOR_LOGIN
+        run: echo name $RELEASE_NAME tag $RELEASE_TAG author $RELEASE_AUTHOR_LOGIN
         env:
           RELEASE_NAME: ${{ github.event.release.name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
